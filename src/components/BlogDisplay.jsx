@@ -24,15 +24,15 @@ function BlogDisplay() {
     <Wrapper>
         {/* <h3>Recently uploaded</h3> */}
         {/* <br /> */}
-        <p className='total_products_p'>Total products: {productsData.length ? (String(productsData.length).padStart(2, 0)) : '--'}</p>
+        <p className='total_products_p'>Total products: {productsData ? (String(productsData.length).padStart(2, 0)) : '--'}</p>
         <br /><br />
         <Wrapper className='blog_wrapper'>
             {productsData.length ? (
                 productsData.map((value, index) => (
                     <Box className='product_box' key={index}>
                         <div className='product_img_div'>
-                            <div className='product_blur_img' style={{backgroundImage: `url('https://abdiftah-shop-server.onrender.com/product_images/${value.product_img1}')`}}></div>
-                            <img src={`https://abdiftah-shop-server.onrender.com/product_images/${value.product_img1}`}/>
+                            <div className='product_blur_img' style={{backgroundImage: `url('https://abdiftah-shop-server.onrender.com/product_images/${value.product_img}')`}}></div>
+                            <img src={`https://abdiftah-shop-server.onrender.com/product_images/${value.product_img}`}/>
                         </div>
 
                         <div className='product_details_div'>

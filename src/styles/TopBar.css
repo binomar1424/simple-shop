@@ -12,3 +12,9 @@
     background-color: white;
     cursor: pointer;
 }
+
+@media screen and (max-width: 650px) {
+    .web_topbar {
+        padding: 2rem 0;
+    }
+}
