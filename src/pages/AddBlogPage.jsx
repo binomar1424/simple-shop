@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import '../styles/AddBlogPage.css'
-import { Page } from '../components/tags'
 import { IoChevronBack } from 'react-icons/io5'
 import { WebContext } from '../WebContext'
 import axios from 'axios'
@@ -78,30 +77,29 @@ function AddBlogPage() {
 
             {productImage && (
                 <div className='new_blog_preview_product_div'>
-                    <div className='new_blog_product_image_con'>
-                        <img src={URL.createObjectURL(productImage)} alt='Product image' />
-                    </div>
+                    <div className='new_blog_blur_img' style={{backgroundImage: `url(${URL.createObjectURL(productImage)})`}}></div>
+                    <img className='new_product_image' src={URL.createObjectURL(productImage)} alt='Product image' />
                 </div>
             )}
 
             <div>
                 <label>Product name</label>
-                <input type="text" placeholder='Enter the product name' value={productName} onChange={(e) => setName(e.target.value)} />
+                <input className='new_blog_input' type="text" placeholder='Enter the product name' value={productName} onChange={(e) => setName(e.target.value)} />
             </div>
 
             <div>
                 <label>Product description</label>
-                <input type="text" placeholder='Enter description' value={productDescription} onChange={(e) => setDescription(e.target.value)} />
+                <input className='new_blog_input' type="text" placeholder='Enter description' value={productDescription} onChange={(e) => setDescription(e.target.value)} />
             </div>
 
             <div>
                 <label htmlFor='upload_blog_image'>Product price</label>
-                <input type="number" placeholder='Enter the price' value={productPrice} onChange={(e) => setPrice(e.target.value)} />
+                <input className='new_blog_input' type="number" placeholder='Enter the price' value={productPrice} onChange={(e) => setPrice(e.target.value)} />
             </div>
 
             <div>
-                <label htmlFor='upload_blog_image'>Pass-code</label>
-                <input type="text" placeholder='Enter the pass-code' value={passCode} onChange={(e) => setPassCode(e.target.value)} />
+                <label htmlFor='upload_blog_image dont_capitalize'>Pass-code</label>
+                <input className='new_blog_input dont_capitalize' type="text" placeholder='Enter the pass-code' value={passCode} onChange={(e) => setPassCode(e.target.value)} />
             </div>
 
             {/* <div>
