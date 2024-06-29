@@ -1,0 +1,96 @@
+.new_blog_form {
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    background-color: white;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+}
+.back_btn {
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-sizing: content-box;
+    padding: 8px;
+}
+.new_blog_form h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.new_blog_form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.new_blog_form input {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    text-transform: capitalize;
+}
+
+.new_blog_preview_product_div {
+    background-color: rgb(122, 84, 33);
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 250px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 10px;
+}
+.new_blog_product_image_con {
+    
+}
+.new_blog_preview_product_div img {
+    /* object-fit: contain; */
+}
+
+#upload_blog_image {
+    display: none;
+}
+#upload_blog_image_label {
+    background-color: lightseagreen;
+    color: white;
+    padding: 0.8rem 1rem;
+    width: fit-content;
+    align-self: flex-end;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.product_submit_btn {
+    margin-top: 1rem;
+    width: fit-content;
+    align-self: center;
+    padding: 1rem 4rem;
+    background-color: rgb(255, 97, 120);
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+.product_submit_btn:disabled {
+    background-color: gray;
+    color: darkgray;
+}
+
+.error_msg {
+    padding: 0.7rem;
+    color: red;
+    background-color: rgba(253, 92, 92, 0.354);
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+.success_msg {
+    padding: 0.7rem;
+    color: darkgreen;
+    background-color: rgba(169, 255, 88, 0.354);
+    border-radius: 8px;
+    text-transform: capitalize;
+}

@@ -1,0 +1,14 @@
+.web_topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 10%;
+}
+
+.web_topbar button {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    background-color: white;
+    cursor: pointer;
+}
