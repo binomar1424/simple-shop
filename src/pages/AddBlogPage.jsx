@@ -36,7 +36,7 @@ function AddBlogPage() {
     
         console.log(...formData);
         try {
-            const res = await axios.post('https://abdiftah-shop-server.onrender.com/products/new', formData)
+            const res = await axios.post('http://localhost:3500/products/new', formData)
             if (res.status == 201) {
                 setIsloading(false);
                 setSuccessMsg(res.data.msg)

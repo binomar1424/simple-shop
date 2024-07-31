@@ -12,7 +12,7 @@ function BlogDisplay() {
 
     useEffect(() => {
         async function getBlogs() {
-            const resp = await axios.get('https://abdiftah-shop-server.onrender.com/products')
+            const resp = await axios.get('http://localhost:3500/products')
             if (resp.status == 200) {
                 setProductsData(resp.data);
             }
@@ -31,8 +31,8 @@ function BlogDisplay() {
                 productsData.map((value, index) => (
                     <Box className='product_box' key={index}>
                         <div className='product_img_div'>
-                            <div className='product_blur_img' style={{backgroundImage: `url('https://abdiftah-shop-server.onrender.com/product_images/${value.product_img}')`}}></div>
-                            <img src={`https://abdiftah-shop-server.onrender.com/product_images/${value.product_img}`}/>
+                            <div className='product_blur_img' style={{backgroundImage: `url('http://localhost:3500/product_images/${value.product_img}')`}}></div>
+                            <img src={`http://localhost:3500/product_images/${value.product_img}`}/>
                         </div>
 
                         <div className='product_details_div'>
@@ -41,6 +41,7 @@ function BlogDisplay() {
                                 <span>Price</span>
                                 <span>{value.product_price} Birr</span>
                             </div>
+                            <br />
                         </div>
                         </Box>
                 ))
